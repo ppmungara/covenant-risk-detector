@@ -150,6 +150,7 @@ if len(calc_df) > 0 and current_dscr < DSCR_WARNING_THRESHOLD:
                 st.warning("Please provide both Resend API Key and Alert Email in the sidebar.")
             else:
                 try:
+                    display_company = st.session_state.selected_company if st.session_state.selected_company and st.session_state.selected_company != "Unknown (Single File)" else "The company"
                     resend.api_key = resend_api_key
                     email_body = f"""
                     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
@@ -157,14 +158,14 @@ if len(calc_df) > 0 and current_dscr < DSCR_WARNING_THRESHOLD:
                             <h2 style="margin: 0; font-size: 24px;">🚨 URGENT: Covenant Breach Alert</h2>
                         </div>
                         <div style="padding: 30px; background-color: #fafafa;">
-                            <p style="font-size: 16px; color: #333; line-height: 1.5;">The company is currently projected to breach the <strong>{DSCR_BREACH_THRESHOLD}x</strong> Debt Service Coverage Ratio (DSCR) limit set by the credit agreement.</p>
+                            <p style="font-size: 16px; color: #333; line-height: 1.5;"><strong>{display_company}</strong> is currently projected to breach the <strong>{DSCR_BREACH_THRESHOLD}x</strong> Debt Service Coverage Ratio (DSCR) limit set by the credit agreement.</p>
                             
                             <div style="background-color: white; border-left: 4px solid #d32f2f; padding: 15px; margin: 20px 0; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
                                 <p style="margin: 0; font-size: 18px; color: #d32f2f;"><strong>Current DSCR Projection: {current_dscr}x</strong></p>
                             </div>
 
                             <h3 style="color: #444; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 30px;">Actionable Mitigation Steps</h3>
-                            <p style="font-size: 15px; color: #555;">Based on the mock credit agreement provisions, you have the following options to cure this shortfall:</p>
+                            <p style="font-size: 15px; color: #555;">Based on the mock credit agreement provisions, {display_company} has the following options to cure this shortfall:</p>
                             
                             <ul style="font-size: 15px; color: #555; line-height: 1.6; padding-left: 20px;">
                                 <li style="margin-bottom: 10px;"><strong>Equity Cure (Section 8.02):</strong> Raise <strong>${shortfall_ebitda:.2f}M</strong> in new equity to cure the EBITDA shortfall. You are permitted 2 cures during the loan term.</li>
@@ -181,7 +182,7 @@ if len(calc_df) > 0 and current_dscr < DSCR_WARNING_THRESHOLD:
                     r = resend.Emails.send({
                         "from": "onboarding@resend.dev",
                         "to": alert_email,
-                        "subject": "URGENT: DSCR Covenant Breach Projected",
+                        "subject": f"URGENT: DSCR Covenant Breach Projected for {display_company}",
                         "html": email_body
                     })
                     st.success("✅ Alert email sent to the API successfully! If it doesn't appear in 1-2 minutes, please check your Spam/Junk folder and confirm the email matches your Resend login.")
