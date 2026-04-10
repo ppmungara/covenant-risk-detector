@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 import resend
+import os
 
 st.set_page_config(page_title="DSCR Covenant Risk Checker", layout="wide", page_icon="📈")
 
@@ -65,7 +66,6 @@ with st.sidebar:
 
     st.markdown("---")
     st.header("Settings")
-    resend_api_key = st.text_input("Resend API Key", type="password", help="Enter your Resend API key to enable email notifications.")
     alert_email = st.text_input("Alert Email Address", help="Email to receive risk alerts.")
 
 # --- Data Input Section ---
@@ -146,8 +146,11 @@ if len(calc_df) > 0 and current_dscr < DSCR_WARNING_THRESHOLD:
         st.subheader("Send Risk Alert")
         st.info("💡 **Note on Free Resend Accounts:** When using the default sender (`onboarding@resend.dev`), Resend only permits sending emails to the exact email address you used to register your API key. For other addresses, you must verify a custom domain in Resend.")
         if st.button("📧 Email Breach Alert to Team"):
-            if not resend_api_key or not alert_email:
-                st.warning("Please provide both Resend API Key and Alert Email in the sidebar.")
+            resend_api_key = os.environ.get("RESEND_API_KEY")
+            if not resend_api_key:
+                st.warning("⚠️ RESEND_API_KEY environment variable not found. Please set it before sending emails.")
+            elif not alert_email:
+                st.warning("Please provide an Alert Email in the sidebar.")
             else:
                 try:
                     display_company = st.session_state.selected_company if st.session_state.selected_company and st.session_state.selected_company != "Unknown (Single File)" else "The company"
