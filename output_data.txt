@@ -1,0 +1,167 @@
+
+--- Balance Sheet - Lunar.docx ---
+$ millions	Q1 2026	Q2 2026	Q3 2026
+Cash	8.00	6.55	5.15
+Accounts Receivable	6.20	5.60	5.00
+Prepaid/Other	1.00	0.90	0.85
+Total Current Assets	15.20	13.05	11.00
+PP&E, Net	10.50	10.00	9.50
+Total Assets	25.70	23.05	20.50
+Accounts Payable	3.20	2.90	2.70
+Accrued Expenses	1.50	1.40	1.30
+Current Portion of Term Loan	0.675	0.675	0.675
+Total Current Liabilities	5.375	4.975	4.675
+Long-Term Debt	49.325	48.650	47.975
+Total Liabilities	54.70	53.625	52.65
+Common Stock	1.00	1.00	1.00
+Retained Earnings (Deficit)	(30.00)	(31.575)	(33.15)
+Total Equity	(29.00)	(30.575)	(32.15)
+Total Liabilities & Equity	25.70	23.05	20.50
+
+--- Cash Flow Statements - Lunar.docx ---
+$ millions	Q1 2026	Q2 2026	Q3 2026
+Net Income	1.05	0.24	0.18
+D&A	0.50	0.50	0.50
+Changes in Working Capital	(0.25)	0.30	0.35
+Cash from Operations	1.30	1.04	1.03
+Capex (AI Systems)	—	(0.50)	—
+Cash from Investing	—	(0.50)	—
+Term Loan Proceeds	50.00	—	—
+Principal Payments	(0.675)	(0.675)	(0.675)
+Cash from Financing	49.325	(0.675)	(0.675)
+Net Change in Cash	50.625	(0.135)	0.355
+Beginning Cash	0.375	8.00	6.55
+Ending Cash	8.00	6.55	5.15
+
+--- Income Statement - Lunar.docx ---
+Lunar Consulting, Inc.
+$ millions	Q1 2026	Q2 2026	Q3 2026
+Revenue	12.50	11.25	10.00
+COGS	(6.25)	(5.85)	(5.50)
+Gross Profit	6.25	5.40	4.50
+Operating Expenses	(3.75)	(3.50)	(3.20)
+AI Implementation	—	(0.50)	—
+EBIT	2.50	1.40	1.30
+D&A	(0.50)	(0.50)	(0.50)
+EBITDA (Reported)	3.00	1.90	1.80
+Add: AI Costs	—	0.50	—
+Covenant EBITDA	3.00	2.40	1.80
+Interest Expense	(1.00)	(1.00)	(1.00)
+Tax	(0.45)	(0.16)	(0.12)
+Net Income	1.05	0.24	0.18
+
+--- Mock Credit Agreement.docx ---
+CREDIT AGREEMENT
+Dated as of April 1, 2026
+LUNAR CONSULTING, INC.,
+a Delaware corporation
+(the "Borrower")
+AND
+VENTURE DEBT FUND IV, L.P.,
+a Delaware limited partnership
+(the "Lender")
+TABLE OF CONTENTS
+ARTICLE I DEFINITIONS
+ARTICLE II THE LOAN
+ARTICLE III FINANCIAL COVENANTS (AI Monitoring Focus)
+ARTICLE IV REPRESENTATIONS AND WARRANTIES
+ARTICLE V AFFIRMATIVE COVENANTS (Data Feeds for AI)
+ARTICLE VI NEGATIVE COVENANTS
+ARTICLE VII EVENTS OF DEFAULT (Breach Triggers)
+ARTICLE VIII REMEDIES
+ARTICLE IX MISCELLANEOUS
+RECITALS
+WHEREAS, the Borrower has requested that the Lender extend credit to the Borrower in the form of a term loan in the aggregate principal amount of $50,000,000 (the "Loan"); and
+WHEREAS, the Lender is willing to make the Loan available to the Borrower on the terms and subject to the conditions set forth herein.
+NOW, THEREFORE, in consideration of the mutual covenants and agreements herein contained, the parties agree as follows:
+ARTICLE I DEFINITIONS
+Section 1.01 Defined Terms.
+"Applicable Margin" means 3.50% per annum.
+"Base Rate" means the Wall Street Journal Prime Rate.
+"Consolidated EBITDA" means, for any period, net income plus interest expense, taxes, depreciation, amortization, and non-recurring charges (including AI implementation costs up to $2.0M in FY2026), minus non-recurring gains.
+"Debt Service Coverage Ratio" or "DSCR" means the ratio of (a) Consolidated EBITDA to (b) the sum of (i) Consolidated Interest Expense plus (ii) scheduled principal payments on Funded Debt (excluding mandatory prepayments).
+"Funded Debt" means all indebtedness for borrowed money including the Loan, capital leases, and drawn portions of revolving credit facilities.
+"Leverage Ratio" means the ratio of (a) Funded Debt to (b) Consolidated EBITDA.
+"Material Adverse Effect" means a material adverse effect on (a) the business, operations, or financial condition of the Borrower, (b) the ability of the Borrower to perform its obligations hereunder, or (c) the rights of the Lender under this Agreement.
+"Testing Period" means each fiscal quarter of the Borrower.
+ARTICLE II THE LOAN
+Section 2.01 Commitment. Subject to the terms and conditions herein, the Lender agrees to make the Loan available in a single drawing on the Closing Date in the principal amount of $50,000,000.
+Section 2.02 Interest. The Loan shall bear interest at the Base Rate plus the Applicable Margin (the "Interest Rate"). Interest shall be payable quarterly in arrears on the first Business Day of each fiscal quarter.
+Section 2.03 Maturity. The Loan shall mature on the fifth anniversary of the Closing Date (the "Maturity Date"), unless earlier terminated pursuant to Article VIII.
+Section 2.04 Prepayment. The Borrower may prepay the Loan in whole or in part without premium or penalty, subject to Section 6.03 (Minimum Liquidity).
+ARTICLE III FINANCIAL COVENANTS (AI Monitoring Focus)
+The Borrower covenants and agrees that, so long as any amount remains outstanding under the Loan:
+Section 3.01 Minimum Debt Service Coverage Ratio. The Borrower shall maintain, as of the last day of each Testing Period, a DSCR of not less than 1.25:1.00.
+AI Note: This is the primary covenant in your Excel model. The system should calculate DSCR = EBITDA / (Interest + Principal Amortization).
+Section 3.02 Maximum Leverage Ratio. The Borrower shall not permit the Leverage Ratio to exceed 5.00:1.00 at any time.
+AI Note: If DSCR falls below 1.25x OR Leverage exceeds 5.00x, the Risk Card should turn red.
+Section 3.03 Minimum Liquidity. The Borrower shall maintain at all times unrestricted cash and Cash Equivalents of not less than $5,000,000 (the "Liquidity Floor").
+ARTICLE IV REPRESENTATIONS AND WARRANTIES
+Section 4.01 Financial Statements. All financial statements delivered to the Lender fairly present the financial condition of the Borrower in accordance with GAAP.
+Section 4.02 No Material Adverse Change. Since December 31, 2025, there has been no Material Adverse Effect.
+ARTICLE V AFFIRMATIVE COVENANTS (Data Feeds for AI)
+The Borrower covenants that, until all obligations are paid in full:
+Section 5.01 Financial Reporting. The Borrower shall deliver to the Lender:
+(a) Quarterly Financial Statements. Within 45 days after the end of each fiscal quarter, unaudited financial statements including balance sheet, income statement, and cash flow statement.
+(b) Compliance Certificate. Concurrently with the financial statements, a Compliance Certificate certified by the CFO setting forth in reasonable detail the calculations of the financial covenants (DSCR and Leverage Ratio) and confirming compliance with Section 3.03 (Liquidity).
+AI Note: The DocuPipe tool should extract this 45-day deadline for monitoring compliance calendar risk.
+Section 5.02 Budgets and Projections. Within 30 days prior to the commencement of each fiscal year, annual operating budgets and cash flow projections, in each case month-by-month for the upcoming fiscal year.
+Section 5.03 Notice of Default. Promptly (and in any event within 3 Business Days) upon any officer obtaining knowledge thereof, written notice of (a) any Default or Event of Default, (b) any breach of representation or warranty, or (c) the institution of any litigation with a claim exceeding $1,000,000.
+AI Note: This 3-day window is a critical "early warning" trigger for the AI monitoring system.
+Section 5.04 Access to Books and Records. Permit representatives of the Lender to inspect the Borrower's properties, books, and records during normal business hours upon reasonable notice.
+ARTICLE VI NEGATIVE COVENANTS
+Section 6.01 Indebtedness. The Borrower shall not create, incur, assume, or suffer to exist any additional Funded Debt except (a) the Loan, (b) purchase money indebtedness not exceeding $2,000,000 in the aggregate, and (c) capital leases not exceeding $1,000,000.
+Section 6.02 Liens. The Borrower shall not create any lien upon any of its assets except Permitted Liens (including purchase money security interests).
+Section 6.03 Distributions. The Borrower shall not declare or pay any dividends or make any distribution to equity holders (a) if a Default exists or would result therefrom, or (b) if the DSCR for the most recent Testing Period was less than 1.50:1.00.
+AI Note: This "Distribution Lock-Up" triggers at 1.50x DSCR (higher than the 1.25x breach threshold). The AI should flag this as "Yellow Warning" at 1.50x, "Red Breach" at 1.25x.
+Section 6.04 Asset Sales. The Borrower shall not sell, lease, or dispose of any assets with a fair market value exceeding $1,000,000 in any fiscal year unless the net proceeds are applied to prepay the Loan.
+ARTICLE VII EVENTS OF DEFAULT (Breach Triggers)
+Each of the following shall constitute an "Event of Default":
+(a) Failure to pay any principal when due or interest within 5 Business Days of when due.
+(b) Failure to perform or observe any covenant in Article III (Financial Covenants) for 5 Business Days after notice from the Lender.
+(c) Failure to perform or observe any other covenant or agreement for 30 days after notice.
+(d) Any representation or warranty proves untrue in any material respect.
+(e) The Borrower generally fails to pay its debts as they become due or makes an assignment for the benefit of creditors.
+(f) Cross-Default. The Borrower defaults under any other agreement for borrowed money or swap agreement with a principal amount exceeding $500,000.
+AI Note: Cross-default clauses are "hidden triggers" the AI must flag—default on a $500K equipment lease could trigger default on this $50M loan.
+(g) Change of Control (defined as sale of 50%+ of voting stock or substantially all assets).
+ARTICLE VIII REMEDIES
+Section 8.01 Remedies. Upon the occurrence of an Event of Default, the Lender may (a) declare the Loan immediately due and payable, (b) terminate any commitment to make additional loans, and (c) exercise all rights and remedies available under applicable law.
+Section 8.02 Equity Cure Right. Notwithstanding Section 8.01, the Borrower shall have the right to cure a breach of the DSCR covenant in Section 3.01 by issuing new equity (cash proceeds only) to the Borrower within 10 Business Days after the end of the applicable Testing Period (an "Equity Cure"). Any Equity Cure shall not exceed 2 times during the term of the Loan.
+AI Note: This "Equity Cure" is a critical remediation path the AI should suggest when forecasting a breach. "Recommend Equity Cure of $X to raise DSCR to 1.25x."
+ARTICLE IX MISCELLANEOUS
+Section 9.01 Notices. All notices shall be in writing and delivered to the addresses set forth below.
+Section 9.02 Governing Law. This Agreement shall be governed by the laws of the State of New York.
+Section 9.03 Waiver; Amendment. No amendment or waiver of any provision shall be effective unless in writing signed by the Borrower and the Lender.
+Section 9.04 Expenses. The Borrower shall pay all reasonable out-of-pocket costs and expenses incurred by the Lender in connection with the preparation, execution, and enforcement of this Agreement.
+Section 9.05 Severability. If any provision is invalid, the remainder shall continue in full force and effect.
+Section 9.06 Counterparts. This Agreement may be executed in counterparts.
+IN WITNESS WHEREOF, the parties have executed this Credit Agreement as of the date first written above.
+BORROWER:
+LUNAR CONSULTING, INC.
+By: _________________________
+Name: [Founder CEO Name]
+Title: Chief Executive Officer
+LENDER:
+VENTURE DEBT FUND IV, L.P.
+By: _________________________
+Name: [Managing Director Name]
+Title: Managing Director
+SCHEDULE I – COMPLIANCE CERTIFICATE TEMPLATE
+To: Venture Debt Fund IV, L.P.
+Date: ____________________
+Re: Compliance Certificate for Quarter Ended _________________
+The undersigned, the Chief Financial Officer of Lunar Consulting, Inc., pursuant to Section 5.01(b) of the Credit Agreement dated April 1, 2026 (the "Agreement"), hereby certifies that:
+I have reviewed the financial statements for the period ended __________.
+The calculations attached hereto set forth the DSCR and Leverage Ratio for such period.
+To my knowledge, the Borrower has complied with all covenants in Article III.
+DSCR Calculation:
+Consolidated EBITDA: __________
+Scheduled Principal Payments: $__________
+DSCR: __________ (Covenant: 1.25x)
+Leverage Ratio Calculation:
+Funded Debt: __________
+Leverage Ratio: __________ (Covenant: 5.00x)
+Status: [ ] COMPLIANT [ ] BREACH
+__________________________
+Chief Financial Officer
