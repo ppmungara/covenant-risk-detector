@@ -27,6 +27,10 @@ DEFAULT_DATA = {
 def init_state():
     if "df" not in st.session_state:
         st.session_state.df = pd.DataFrame(DEFAULT_DATA)
+    if "uploaded_filename" not in st.session_state:
+        st.session_state.uploaded_filename = None
+    if "selected_company" not in st.session_state:
+        st.session_state.selected_company = None
 
 init_state()
 
@@ -34,6 +38,32 @@ st.title("📈 DSCR Covenant Risk Checker")
 st.markdown("Monitor Debt Service Coverage Ratio (DSCR) against credit agreement covenants to identify and mitigate breach risks.")
 
 with st.sidebar:
+    st.header("1. Data Source")
+    st.markdown("Upload a CSV file containing your company data.")
+    uploaded_file = st.file_uploader("Upload CSV", type="csv")
+    
+    if uploaded_file is not None:
+        if st.session_state.uploaded_filename != uploaded_file.name:
+            st.session_state.uploaded_filename = uploaded_file.name
+            st.session_state.full_uploaded_df = pd.read_csv(uploaded_file)
+            st.session_state.selected_company = None
+            
+        if "Company" in st.session_state.full_uploaded_df.columns:
+            companies = st.session_state.full_uploaded_df["Company"].unique()
+            selected_company = st.selectbox("Select Company", companies)
+            
+            if selected_company != st.session_state.selected_company:
+                st.session_state.selected_company = selected_company
+                df_filtered = st.session_state.full_uploaded_df[st.session_state.full_uploaded_df["Company"] == selected_company].drop(columns=["Company"])
+                st.session_state.df = df_filtered.reset_index(drop=True)
+                st.rerun() # Refresh the view with new data
+        else:
+            if st.session_state.selected_company != "Unknown (Single File)":
+                st.session_state.selected_company = "Unknown (Single File)"
+                st.session_state.df = st.session_state.full_uploaded_df.copy()
+                st.rerun()
+
+    st.markdown("---")
     st.header("Settings")
     resend_api_key = st.text_input("Resend API Key", type="password", help="Enter your Resend API key to enable email notifications.")
     alert_email = st.text_input("Alert Email Address", help="Email to receive risk alerts.")
